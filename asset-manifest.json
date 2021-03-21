@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/form-validation-formik/static/css/main.b1794d14.chunk.css",
+    "main.js": "/form-validation-formik/static/js/main.9ac548dc.chunk.js",
+    "main.js.map": "/form-validation-formik/static/js/main.9ac548dc.chunk.js.map",
+    "runtime-main.js": "/form-validation-formik/static/js/runtime-main.aeb8c080.js",
+    "runtime-main.js.map": "/form-validation-formik/static/js/runtime-main.aeb8c080.js.map",
+    "static/js/2.abf79386.chunk.js": "/form-validation-formik/static/js/2.abf79386.chunk.js",
+    "static/js/2.abf79386.chunk.js.map": "/form-validation-formik/static/js/2.abf79386.chunk.js.map",
+    "static/js/3.d3ebf876.chunk.js": "/form-validation-formik/static/js/3.d3ebf876.chunk.js",
+    "static/js/3.d3ebf876.chunk.js.map": "/form-validation-formik/static/js/3.d3ebf876.chunk.js.map",
+    "index.html": "/form-validation-formik/index.html",
+    "static/css/main.b1794d14.chunk.css.map": "/form-validation-formik/static/css/main.b1794d14.chunk.css.map",
+    "static/js/2.abf79386.chunk.js.LICENSE.txt": "/form-validation-formik/static/js/2.abf79386.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/form-validation-formik/static/media/Inter-Regular.2505c0d4.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aeb8c080.js",
+    "static/js/2.abf79386.chunk.js",
+    "static/css/main.b1794d14.chunk.css",
+    "static/js/main.9ac548dc.chunk.js"
+  ]
+}
