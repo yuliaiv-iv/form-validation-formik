@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import FormInput from './FormInput';
@@ -8,14 +8,14 @@ import { postForm } from '../utils/api';
 function SubmitForm() {
 
   const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-  const [isSubmitingError, setIsSubmitingError] = React.useState('');
-  const [isSubmitingButton, setIsSubmitingButton] = React.useState('Отправить форму');
+  const [isSubmitingError, setIsSubmitingError] = useState('');
+  const [isSubmitingButton, setIsSubmitingButton] = useState('Отправить форму');
 
   return (
     <section className="form">
       <h3 className="form__title">форма</h3>
       <p className="form__paragraph">
-        Заполняя эту форму, вы становитесь частью проекта.</p>
+        Заполняя эту форму, вы становитесь частью проекта</p>
       <Formik
         initialValues={{
           name: '',
@@ -52,7 +52,7 @@ function SubmitForm() {
                 setIsSubmitingError('');
                 setIsSubmitingButton('Ура, форма отправлена!');
                 resetForm('');
-                console.log((JSON.stringify(values, null, 2)));
+                alert((JSON.stringify(values, null, 2)));
               }, 1500)
             })
             .then(() => {

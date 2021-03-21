@@ -1,6 +1,9 @@
+.form__checkbox-text {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
 @media screen and (max-width: 475px) {
   .form__checkbox-text {
-    font-family: 'Inter', Arial, sans-serif;
     line-height: 1.83;
   }
 }
