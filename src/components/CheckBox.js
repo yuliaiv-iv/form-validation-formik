@@ -6,13 +6,29 @@ const CheckBox = ({ ...props }) => {
   const [field, meta] = useField({ ...props, type: "checkbox" });
   return (
     <>
-      <label className="form__field">
-        <input className="form__input form__input_checkbox" {...field} {...props} type="checkbox" />
+      <label
+        className="form__field"
+      >
+        <input
+          className="form__input form__input_checkbox"
+          {...field}
+          {...props}
+          type="checkbox"
+        />
         <span className="form__checkbox-text">
-          Согласен с <a className="form__checkbox-accent" href='#'>офертой</a>
+          Согласен с
+          <a className="form__checkbox-accent" href='#'>
+            офертой
+          </a>
         </span>
       </label>
-      {meta.touched && meta.error && <span className="form__item-error">{meta.error}</span>}
+      {meta.touched &&
+        meta.error &&
+        <span className="form__item-error"
+        >
+          {meta.error}
+        </span>
+      }
     </>
   );
 };

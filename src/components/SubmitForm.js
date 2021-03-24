@@ -13,9 +13,12 @@ function SubmitForm() {
 
   return (
     <section className="form">
-      <h3 className="form__title">форма</h3>
+      <h3 className="form__title">
+        форма
+      </h3>
       <p className="form__paragraph">
-        Заполняя эту форму, вы становитесь частью проекта</p>
+        Заполняя эту форму, вы становитесь частью проекта
+      </p>
       <Formik
         initialValues={{
           name: '',
@@ -70,8 +73,10 @@ function SubmitForm() {
         }}
       >
         {formik => (
-          <Form className="form__fields"
-            noValidate >
+          <Form
+            className="form__fields"
+            noValidate
+          >
             <FormInput
               name="name"
               type="text"
@@ -95,12 +100,17 @@ function SubmitForm() {
             <CheckBox
               name="terms"
             />
-            <button className="form__button button"
+            <button
+              className="form__button button"
               type="submit"
             >
               {formik.isSubmitting ? 'Форма отправляеться...' : `${isSubmitingButton}`}
             </button>
-            <span className="form__button-error">{isSubmitingError}</span>
+            <span
+              className="form__button-error"
+            >
+              {isSubmitingError}
+            </span>
           </Form>
         )}
       </Formik>
