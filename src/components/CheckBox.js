@@ -11,24 +11,21 @@ const CheckBox = ({ ...props }) => {
       >
         <input
           className="form__input form__input_checkbox"
+          type="checkbox"
           {...field}
           {...props}
-          type="checkbox"
         />
-        <span className="form__checkbox-text">
-          Согласен с
+        <span className="form__checkbox-text">Согласен с
           <a className="form__checkbox-accent" href='#'>
             офертой
           </a>
         </span>
       </label>
-      {meta.touched &&
-        meta.error &&
-        <span className="form__item-error"
-        >
+      {meta.touched && meta.error && (
+        <span className="form__item-error">
           {meta.error}
         </span>
-      }
+      )}
     </>
   );
 };

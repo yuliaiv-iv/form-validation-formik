@@ -15,12 +15,11 @@ const FormInput = ({ ...props }) => {
           {...field}
           {...props}
         />
-        {meta.touched &&
-          meta.error &&
+        {meta.touched && meta.error && (
           <span className="form__item-error">
             {meta.error}
           </span>
-        }
+        )}
       </label>
     </>
   );

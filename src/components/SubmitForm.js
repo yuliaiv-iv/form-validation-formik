@@ -8,8 +8,8 @@ import { postForm } from '../utils/api';
 function SubmitForm() {
 
   const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-  const [isSubmitingError, setIsSubmitingError] = useState('');
-  const [isSubmitingButton, setIsSubmitingButton] = useState('Отправить форму');
+  const [isSubmitingError, setIsSubmitingError] = useState("");
+  const [isSubmitingButton, setIsSubmitingButton] = useState("Отправить форму");
 
   return (
     <section className="form">
