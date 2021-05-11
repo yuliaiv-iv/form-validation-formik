@@ -9,15 +9,15 @@ function SubmitForm() {
 
   const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
   const [isSubmitingError, setIsSubmitingError] = useState("");
-  const [isSubmitingButton, setIsSubmitingButton] = useState("Отправить форму");
+  const [isSubmitingButton, setIsSubmitingButton] = useState("Submit form");
 
   return (
     <section className="form">
       <h3 className="form__title">
-        форма
+        Form
       </h3>
       <p className="form__paragraph">
-        Заполняя эту форму, вы становитесь частью проекта
+        Fill out this form to become a part of the project
       </p>
       <Formik
         initialValues={{
@@ -30,21 +30,21 @@ function SubmitForm() {
 
         validationSchema={Yup.object({
           name: Yup.string()
-            .min(3, "Имя должно быть не короче 3 символов*")
-            .max(60, "Имя не должно быть длиннее 50 символов*")
-            .required("Обязательное поле*"),
+            .min(3, "Your name must be at least 3 characters*")
+            .max(60, "Your name cannot be more than 50 characters*")
+            .required("Required field*"),
           email: Yup.string()
-            .email("Не действительный адрес электронной почты*")
-            .required("Обязательное поле*"),
+            .email("Invalid email address*")
+            .required("Required field*"),
           phone: Yup.string()
-            .matches(phoneRegExp, "Номер телефона недействителен*")
-            .required("Обязательное поле*"),
+            .matches(phoneRegExp, "Invalid phone number*")
+            .required("Required field*"),
           text: Yup.string()
-            .min(10, "Стих должен быть не короче 10 символов*")
-            .max(500, "Стих не должен быть длиннее 500 символов*")
-            .required("Обязательное поле*"),
+            .min(10, "Poem must be at least 10 characters*")
+            .max(500, "Poem cannot be more than 500*")
+            .required("Required field*"),
           terms: Yup.bool()
-            .oneOf([true], "Требуется принять условия*")
+            .oneOf([true], "Please accept terms*")
         })}
 
         onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -53,20 +53,20 @@ function SubmitForm() {
               setTimeout(() => {
                 setSubmitting(false);
                 setIsSubmitingError('');
-                setIsSubmitingButton('Ура, форма отправлена!');
+                setIsSubmitingButton('Form submitted');
                 resetForm('');
                 alert((JSON.stringify(values, null, 2)));
               }, 1500)
             })
             .then(() => {
               setTimeout(() => {
-                setIsSubmitingButton('Отправить другую форму');
+                setIsSubmitingButton('Submit another form');
               }, 3000)
             })
             .catch((err) => {
               setTimeout(() => {
                 console.log(err);
-                setIsSubmitingError('Упс, что-то пошло не так, попробуйте ещё раз!');
+                setIsSubmitingError('Ops something went wrong, try again later');
                 resetForm('');
               }, 1500)
             })
@@ -80,22 +80,22 @@ function SubmitForm() {
             <FormInput
               name="name"
               type="text"
-              placeholder="Имя и фамилия автора"
+              placeholder="Name"
             />
             <FormInput
               name="phone"
               type="tel"
-              placeholder="Телефон  +7 XXX XXX XX XX"
+              placeholder="Phone  +1 XXX XXX XX XX"
             />
             <FormInput
               name="email"
               type="email"
-              placeholder="Почта"
+              placeholder="Email"
             />
             <FormInput
               name="text"
               type="text"
-              placeholder="Стихи"
+              placeholder="Poem"
             />
             <CheckBox
               name="terms"
@@ -104,7 +104,7 @@ function SubmitForm() {
               className="form__button button"
               type="submit"
             >
-              {formik.isSubmitting ? 'Форма отправляеться...' : `${isSubmitingButton}`}
+              {formik.isSubmitting ? 'Submitting...' : `${isSubmitingButton}`}
             </button>
             <span
               className="form__button-error"

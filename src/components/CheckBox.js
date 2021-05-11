@@ -15,11 +15,7 @@ const CheckBox = ({ ...props }) => {
           {...field}
           {...props}
         />
-        <span className="form__checkbox-text">Согласен с
-          <a className="form__checkbox-accent" href='#'>
-            офертой
-          </a>
-        </span>
+        <span className="form__checkbox-text">Agree to <a className="form__checkbox-accent" href='#'>terms and conditions</a></span>
       </label>
       {meta.touched && meta.error && (
         <span className="form__item-error">

@@ -1,11 +1,11 @@
 ### Form validation
-https://yuliaiv-iv.github.io/form-validation-formik
 
-### Технологии
+GH Pages https://yuliaiv-iv.github.io/form-validation-formik
+
+### Stack
 
 * React
 * CSS3
 * Formik
 * Yup
-### Методологии
-* БЭМ
+
